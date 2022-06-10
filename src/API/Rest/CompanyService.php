@@ -16,7 +16,7 @@ class CompanyService extends RestModel
     public function create(array $attributes = [],$dupCheck = false){
         $this->mock($attributes);
         if($dupCheck){
-            $data = $this->client->restfulRequest($this->updateVerb,$this->getFullUrl($this->id),(array)$this->toArray());
+            $data = $this->client->restfulRequest($this->updateVerb,$this->getFullUrl($dupCheck),(array)$this->toArray());
             $this->fill($data);
         }else{
             $this->save();
