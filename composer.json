@@ -1,0 +1,55 @@
+{
+    "name": "binfotech/laravel-infusionsoft",
+    "description": "This package provides port of the Infusionsoft SDK utilizing Laravel fascades.",
+    "keywords": [
+        "laravel",
+        "infusionsoft",
+        "sdk",
+        "isdk"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raman Deep Bajwa",
+            "email": "dbajwa763@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "infusionsoft/php-sdk": "^1.4",
+        "laravel/framework": ">=5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Binfotech\\Infusionsoft\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "autoload-dev": {
+            "psr-4": {
+                "Tests\\": "tests/"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Binfotech\\Infusionsoft\\InfusionsoftServiceProvider"
+            ],
+            "aliases": {
+                "Infusionsoft": "Binfotech\\Infusionsoft\\InfusionsoftFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
